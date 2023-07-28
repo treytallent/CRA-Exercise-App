@@ -1,0 +1,47 @@
+@import "loading.css";
+@import "bodypart-list.css";
+@import "exercises-list.css";
+@import "exercises-nav.css";
+@import "reset.css";
+
+:root {
+   --color-soft-blue: hsl(231, 69%, 60%);
+   --color-soft-red: hsl(0, 94%, 66%);
+   --color-greyish-blue: hsl(229, 8%, 60%);
+   --color-very-dark-blue: hsl(229, 31%, 21%);
+}
+
+body {
+   line-height: 1.5;
+   font-family: "Rubik", sans-serif;
+   min-height: 100vh;
+   display: grid;
+   grid-template-rows: min-content 1fr;
+   overflow-x: hidden;
+   text-transform: capitalize;
+   color: var(--color-very-dark-blue);
+}
+
+.main {
+   display: grid;
+   min-height: 100vh;
+}
+
+.flex {
+   display: flex;
+}
+
+.space-between {
+   justify-content: space-between;
+   align-items: center;
+}
+
+@media screen and (min-width: 30em) {
+   .main {
+      column-gap: var(--container-gap, 2rem);
+      grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+            1rem,
+            1fr
+         );
+   }
+}

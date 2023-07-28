@@ -1,0 +1,34 @@
+.bodyPartList-container {
+   display: grid;
+   grid-auto-flow: dense;
+   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   place-content: center;
+   margin: 1.5em;
+   grid-gap: 1.5em;
+}
+
+@media screen and (min-width: 30em) {
+   .bodyPartList-container {
+      grid-column: 2 / span 2;
+   }
+}
+
+.part-container {
+   display: grid;
+   place-self: center;
+   width: 100%;
+   height: 100%;
+}
+.part-btn {
+   aspect-ratio: 1;
+   text-transform: inherit;
+   border: none;
+   background-image: url(../icons/abductors.png);
+}
+
+.part-name {
+   margin: 0.5em 0;
+   font-size: 1.125rem;
+   text-align: center;
+   font-weight: 500;
+}

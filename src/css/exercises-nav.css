@@ -1,0 +1,38 @@
+.exercisesNav-searchbar {
+   border: 1.5px solid var(--color-greyish-blue);
+   width: 100%;
+   border-radius: 10px;
+   padding: 0.5em;
+}
+
+.exercisesNav-searchbar::placeholder {
+   color: var(--color-greyish-blue);
+}
+
+.exercisesNav-heading {
+   color: var(--color-soft-blue);
+   font-size: 1.5rem;
+   font-weight: 500;
+}
+
+.exercisesNav-close-btn {
+   background: none;
+   border: none;
+   padding: 0.5em;
+   font-size: 2em;
+   color: var(--color-soft-blue);
+}
+
+.exercisesNav-heading-container {
+   position: sticky;
+   inset: 0;
+   background-color: #ffff;
+   padding-bottom: 1.5em;
+   margin: 0 0.75em;
+}
+
+@media screen and (min-width: 30em) {
+   .exercisesNav-heading-container {
+      grid-column: 2 / span 2;
+   }
+}
