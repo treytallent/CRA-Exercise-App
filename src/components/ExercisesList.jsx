@@ -11,7 +11,7 @@ export default function ExercisesList({ name, target, equipment, gifUrl }) {
 
    return (
       <li className="exercise">
-         <img className="exercise-icon" src=""></img>
+         <img className="exercise-icon" src={`src/icons/${target}.svg`}></img>
          <p className="exercise-name">{name}</p>
          <div className="chip-container">
             <p className="chip">{target}</p>

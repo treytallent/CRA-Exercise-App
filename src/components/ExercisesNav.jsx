@@ -28,7 +28,6 @@ export default function ExercisesNav({
       const { target } = filteredData
 
       const filterList = filteredData.filter(exercise => exercise.target)
-      console.log(target)
    }
    createFilterList()
 

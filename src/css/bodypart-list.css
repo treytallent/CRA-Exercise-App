@@ -2,7 +2,7 @@
    display: grid;
    grid-auto-flow: dense;
    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-   place-content: center;
+   place-content: start;
    margin: 1.5em;
    grid-gap: 1.5em;
 }
@@ -23,7 +23,7 @@
    aspect-ratio: 1;
    text-transform: inherit;
    border: none;
-   background-image: url(../icons/abductors.png);
+   width: 100%;
 }
 
 .part-name {

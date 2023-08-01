@@ -34,7 +34,7 @@ export default function App() {
       { name: "upper legs", id: uuidv4() },
       { name: "waist", id: uuidv4() },
    ]
-   const LOCAL_STORAGE_KEY = "exerciseApp.exercises"
+   const SESSION_STORAGE_KEY = "exerciseApp.exercises"
    const exerciseFetch = loadExerciseData()
    const url = "https://exercisedb.p.rapidapi.com/exercises"
    const options = {
@@ -58,10 +58,10 @@ export default function App() {
       }
    }
    function saveExerciseData(exercises) {
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(exercises))
+      sessionStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(exercises))
    }
    function loadExerciseData() {
-      const dataJSON = localStorage.getItem(LOCAL_STORAGE_KEY)
+      const dataJSON = sessionStorage.getItem(SESSION_STORAGE_KEY)
       return JSON.parse(dataJSON)
    }
    //Holds the initially fetched data.
@@ -103,15 +103,18 @@ export default function App() {
          {!fetchedExerciseData && <Loading />}
          {fetchedExerciseData && !listBodyPart && (
             // If data is stored and the exercise exercise list is not currently open, render the bodyPart list. */}
-            <ul role="list" className="bodyPartList-container">
-               {bodyParts.map(bodyPart => (
-                  <BodyPartList
-                     key={bodyPart.id}
-                     name={bodyPart.name}
-                     setListBodyPart={setListBodyPart}
-                  ></BodyPartList>
-               ))}
-            </ul>
+            <>
+               <h1 className="title">Exercises by Body Part</h1>
+               <ul role="list" className="bodyPartList-container">
+                  {bodyParts.map(bodyPart => (
+                     <BodyPartList
+                        key={bodyPart.id}
+                        name={bodyPart.name}
+                        setListBodyPart={setListBodyPart}
+                     ></BodyPartList>
+                  ))}
+               </ul>
+            </>
          )}
          {/* If data is stored and the exercise list is open, and filteredData
          has data, render the list of exercises. */}
