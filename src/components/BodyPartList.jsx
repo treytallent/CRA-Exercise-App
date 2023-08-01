@@ -1,17 +1,16 @@
 import React from "react"
 
 export default function BodyPartList({ name, setListBodyPart }) {
-   const styles = { background: "../icons/abs.svg" }
-
    return (
       <li className="part-container">
-         <button
+         <img
+            role="button"
             className="part-btn"
-            style={styles}
+            src={`../src/icons/${name}.svg`}
             onClick={() => {
                setListBodyPart({ name })
             }}
-         ></button>
+         ></img>
          <p className="part-name">{name}</p>
       </li>
    )

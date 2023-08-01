@@ -24,6 +24,8 @@
    text-transform: inherit;
    border: none;
    width: 100%;
+   padding: 1.5em;
+   background-color: #d1d1d1;
 }
 
 .part-name {
