@@ -15,6 +15,7 @@
    border-bottom: 1px solid var(--color-greyish-blue);
    font-weight: 500;
    gap: 0.5em 0.75em;
+   align-content: center;
 }
 .exercise-icon {
    grid-row: 1 / 3;
