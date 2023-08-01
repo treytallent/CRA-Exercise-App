@@ -1,4 +1,4 @@
-A basic app used to display exercises using ExerciseDB
+A basic app built using React and Vite that displays a list of exercises fetched by ExerciseDB API
 
 Live Preview
 https://tourmaline-hummingbird-0f1d1f.netlify.app
