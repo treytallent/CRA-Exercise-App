@@ -8,7 +8,6 @@ import "./css/app.css"
 
 //To do
 //Allow users to add their own bodyparts and exercicses
-//Open exercises to view the exercise gif
 //Filter exercises by target muscle group and/or equipment
 //Create icons for bodyParts and target muscle groups to replace the black squares
 

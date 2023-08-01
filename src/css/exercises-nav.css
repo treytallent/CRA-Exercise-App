@@ -1,8 +1,8 @@
 .exercisesNav-searchbar {
    border: 1.5px solid var(--color-greyish-blue);
-   width: 100%;
    border-radius: 10px;
    padding: 0.5em;
+   grid-column: 1 / span 2;
 }
 
 .exercisesNav-searchbar::placeholder {
@@ -13,6 +13,7 @@
    color: var(--color-soft-blue);
    font-size: 1.5rem;
    font-weight: 500;
+   align-self: center;
 }
 
 .exercisesNav-close-btn {
@@ -29,10 +30,28 @@
    background-color: #ffff;
    padding-bottom: 1.5em;
    margin: 0 0.75em;
+   display: grid;
+   grid-auto-columns: max-content;
+   justify-content: space-between;
 }
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 38em) {
    .exercisesNav-heading-container {
       grid-column: 2 / span 2;
+      justify-content: start;
+      grid-template-columns: 2fr 1fr;
+      grid-auto-columns: min-content;
+   }
+   .exercisesNav-heading-container * {
+      grid-row: 1;
+      width: max-content;
+   }
+   .exercisesNav-searchbar {
+      grid-row: 1;
+      grid-column: 2;
+      align-self: center;
+   }
+   .exercisesNav-close-btn {
+      grid-column: 3;
    }
 }

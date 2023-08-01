@@ -34,12 +34,10 @@ export default function ExercisesNav({
 
    return (
       <div className="exercisesNav-heading-container">
-         <div className="flex space-between">
-            <h2 className="exercisesNav-heading">{`${listBodyPart.name} Exercises`}</h2>
-            <button onClick={closeList} className="exercisesNav-close-btn">
-               &times;
-            </button>
-         </div>
+         <h2 className="exercisesNav-heading">{`${listBodyPart.name} Exercises`}</h2>
+         <button onClick={closeList} className="exercisesNav-close-btn">
+            &times;
+         </button>
          <input
             type="text"
             onChange={e => {

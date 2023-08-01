@@ -1,9 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 
 export default function ExercisesList({ name, target, equipment, gifUrl }) {
+   const [isVisible, setVisible] = useState(false)
+   const visibleStyle = {
+      display: isVisible ? "" : "none",
+   }
+   function toggleVisible() {
+      setVisible(prevIsVisible => !prevIsVisible)
+   }
+
    return (
       <li className="exercise">
-         <img className="exercise-icon"></img>
+         <img className="exercise-icon" src=""></img>
          <p className="exercise-name">{name}</p>
          <div className="chip-container">
             <p className="chip">{target}</p>
@@ -12,11 +20,12 @@ export default function ExercisesList({ name, target, equipment, gifUrl }) {
          <button
             className="exercise-button"
             onClick={() => {
-               console.log("Clicked")
+               toggleVisible()
             }}
          >
-            o
+            &gt;
          </button>
+         <img className="exercise-gif" style={visibleStyle} src={gifUrl}></img>
       </li>
    )
 }
