@@ -23,16 +23,48 @@ export default function App() {
    }
    //Categories of different body parts used to organise the exercise list
    const bodyParts = [
-      { name: "back", id: uuidv4() },
-      { name: "cardio", id: uuidv4() },
-      { name: "chest", id: uuidv4() },
-      { name: "lower arms", id: uuidv4() },
-      { name: "lower legs", id: uuidv4() },
-      { name: "neck", id: uuidv4() },
-      { name: "shoulders", id: uuidv4() },
-      { name: "upper arms", id: uuidv4() },
-      { name: "upper legs", id: uuidv4() },
-      { name: "waist", id: uuidv4() },
+      { name: "back", id: uuidv4(), imgUrl: "https://i.imgur.com/vQFklTd.png" },
+      {
+         name: "cardio",
+         id: uuidv4(),
+         imgUrl: "https://i.imgur.com/BYPyKQb.png",
+      },
+      {
+         name: "chest",
+         id: uuidv4(),
+         imgUrl: "https://i.imgur.com/b468huJ.png",
+      },
+      {
+         name: "lower arms",
+         id: uuidv4(),
+         imgUrl: "https://i.imgur.com/5MJ32JH.png",
+      },
+      {
+         name: "lower legs",
+         id: uuidv4(),
+         imgUrl: "https://i.imgur.com/h4qPQ0i.png",
+      },
+      { name: "neck", id: uuidv4(), imgUrl: "https://i.imgur.com/1AqcY58.png" },
+      {
+         name: "shoulders",
+         id: uuidv4(),
+         imgUrl: "https://i.imgur.com/AjtPy3m.png",
+      },
+      {
+         name: "upper arms",
+         id: uuidv4(),
+         imgUrl: "https://i.imgur.com/EdG3IQB.png",
+      },
+      {
+         name: "upper legs",
+         id: uuidv4(),
+         imgUrl: "https://i.imgur.com/FLYeWBA.png",
+      },
+      {
+         name: "waist",
+         id: uuidv4(),
+         imgUrl: "https://i.imgur.com/XsbCiCG.png",
+      },
    ]
    const SESSION_STORAGE_KEY = "exerciseApp.exercises"
    const exerciseFetch = loadExerciseData()
@@ -105,16 +137,15 @@ export default function App() {
             // If data is stored and the exercise exercise list is not currently open, render the bodyPart list. */}
             <>
                <div className="header">
-                  <h1 className="title">exercise list</h1>
-                  <h2 className="subtitle">
-                     select a body part to view a list of exercises
-                  </h2>
+                  <h1>exercise list</h1>
+                  <h2>select a body part to view a list of exercises</h2>
                </div>
                <ul role="list" className="bodyPartList-container">
                   {bodyParts.map(bodyPart => (
                      <BodyPartList
                         key={bodyPart.id}
                         name={bodyPart.name}
+                        imgUrl={bodyPart.imgUrl}
                         setListBodyPart={setListBodyPart}
                      ></BodyPartList>
                   ))}

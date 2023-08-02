@@ -39,8 +39,13 @@ body {
 }
 
 .header {
+   margin-block: 2em;
    text-align: center;
    align-items: center;
+}
+
+.header h1 {
+   color: var(--color-soft-blue);
 }
 
 @media screen and (min-width: 38em) {
