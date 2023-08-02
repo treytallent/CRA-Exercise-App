@@ -1,16 +1,7 @@
 .bodyPartList-container {
    display: grid;
-   grid-auto-flow: dense;
    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-   place-content: start;
-   margin: 1.5em;
    grid-gap: 1.5em;
-}
-
-@media screen and (min-width: 38em) {
-   .bodyPartList-container {
-      grid-column: 2 / span 2;
-   }
 }
 
 .part-container {
@@ -23,16 +14,20 @@
 }
 .part-btn {
    aspect-ratio: 1;
-   text-transform: inherit;
-   border: none;
    width: 100%;
    padding: 1.5em;
    object-fit: contain;
 }
 
 .part-name {
-   margin-bottom: 0.5em;
    font-size: 1.125rem;
    text-align: center;
    font-weight: 500;
+   margin: 0 0.5em 0.5em;
+}
+
+@media screen and (min-width: 38em) {
+   .bodyPartList-container {
+      grid-column: 2 / span 2;
+   }
 }
