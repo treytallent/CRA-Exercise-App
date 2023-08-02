@@ -104,7 +104,12 @@ export default function App() {
          {fetchedExerciseData && !listBodyPart && (
             // If data is stored and the exercise exercise list is not currently open, render the bodyPart list. */}
             <>
-               <h1 className="title">Exercises by Body Part</h1>
+               <div className="header">
+                  <h1 className="title">exercise list</h1>
+                  <h2 className="subtitle">
+                     select a body part to view a list of exercises
+                  </h2>
+               </div>
                <ul role="list" className="bodyPartList-container">
                   {bodyParts.map(bodyPart => (
                      <BodyPartList

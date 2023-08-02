@@ -38,9 +38,9 @@ body {
    align-items: center;
 }
 
-.title {
+.header {
    text-align: center;
-   align-self: center;
+   align-items: center;
 }
 
 @media screen and (min-width: 38em) {
@@ -52,7 +52,7 @@ body {
             1fr
          );
    }
-   .title {
+   .header {
       grid-column: 2 / span 2;
    }
 }
