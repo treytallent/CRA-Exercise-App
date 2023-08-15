@@ -72,7 +72,7 @@ export default function App() {
    const options = {
       method: "GET",
       headers: {
-         "X-RapidAPI-Key": "f9c545645cmsh90d1363e38d8f0dp18b394jsn8d89786e2099",
+         "X-RapidAPI-Key": `${import.meta.env.VITE_API_KEY}`,
          "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
       },
    }
