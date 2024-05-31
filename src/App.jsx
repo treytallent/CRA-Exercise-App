@@ -72,10 +72,11 @@ export default function App() {
    const options = {
       method: "GET",
       headers: {
-         "X-RapidAPI-Key": `${import.meta.env.VITE_API_KEY}`,
+         "X-RapidAPI-Key": "f9c545645cmsh90d1363e38d8f0dp18b394jsn8d89786e2099",
          "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
       },
    }
+
    //If no local storage data, fetch from api.
    //Save API data to localStorage.
    //Set API data to the state.
